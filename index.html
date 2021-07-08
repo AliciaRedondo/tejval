@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEJVAL</title>
+    <link href = "https: //fonts.googleapis.com/css2? family = Roboto & display = swap "rel =" stylesheet ">
+    <style>
+        body{
+            margin: 0;;
+        }
+        section{
+            display: flex;
+            width: 100%;
+        }
+        article{
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+            width: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: width 500ms ease 200ms;
+        }
+        article::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        article:first-child{
+            background-image: url("./assets/professional-dentist-tools-and-chair-in-the-dental-office.jpg");
+        }
+        article:last-child{
+            background-image: url("./assets/little-girl-sitting-on-the-floor-and-looking-how-golden-retriever-dog-eating.jpg");
+        }
+        article:hover{
+            width: 75%;
+        }
+        article:hover:after {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .container{
+            width: 200px;
+            z-index: 2;
+            
+        } 
+        .container a{
+            display: block;
+            text-decoration: none;
+            background-color: #1c4b7e;
+            padding: 0.5em 2em;
+            border-radius: 3px;
+            color: white;
+            margin: 0 auto;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+        }
+        .container a:hover {
+            background-color: white;
+            border: solid 5px #1c4b7e;
+            color: #1c4b7e;
+        }
+        .container img{
+            width: 100%;;
+            display: block;
+            margin-bottom: 2rem;
+        }
+        /*mobile*/
+        @media(max-width: 600px){
+            section{
+                flex-direction: column;
+            }
+            article{
+                width: 100%;
+                height: 50vh;
+            }
+            article {
+                width: 100% !important;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <article>
+            <div class="container">
+                <img src="./assets/logoTejvaldental2.svg" alt="">
+                <a href="http://tejvaldental.depositodigital.es/#home">IR AL DEPOSITO</a>
+            </div>
+        </article>
+        <article>
+            <div class="container">
+                <img src="./assets/teje.png" alt="">
+                <a href="http://tejval.tienda.today/#home">IR A LA TIENDA</a>
+            </div>
+        </article>
+    </section>
+      
+
+</body>
+</html>
